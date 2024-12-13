@@ -1,0 +1,66 @@
+.container{
+    width: 20%;
+    height: 100%;
+    background-color: #FFEDE6;
+    position: fixed;
+    top: 12;
+    left: 0;
+    z-index: 1;
+    border-right: 2px solid #4CAF50;
+}
+
+.searchProduct{
+    width: 80%;
+    height: 4vh;
+    border-radius: 16px;
+    border: 2px solid #4CAF50;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vh;
+}
+
+h2{
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.slider{
+    width: 80%;
+    background-color: blue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-range{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.8vw;
+    margin-top: 0.8vh;
+}
+
+.minPrice:focus, .maxPrice:focus{
+    outline: none;
+}
+
+.minPrice, .maxPrice{
+    width: 8vw;
+}
+
+.links{
+    margin-top: 6vh;
+    font-size: 1.4vw;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #DD183B;
+}

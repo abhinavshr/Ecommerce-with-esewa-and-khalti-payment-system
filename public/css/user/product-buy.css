@@ -1,0 +1,98 @@
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #ffece5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10%;
+    margin-bottom: 0px;
+    margin-top: 5vh;
+}
+.image-section {
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+.details-section {
+    width: 70%;
+    padding: 30px;
+    color: #333;
+    background-color: #ffece5;
+}
+.details-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.details-section .price {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.details-section .price del {
+    color: #999;
+    margin-right: 10px;
+}
+.details-section .availability {
+    color: #28a745;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.details-section .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.details-section .category {
+    color: #d9534f;
+    font-size: 14px;
+}
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.add-to-cart input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+.add-to-cart button {
+    padding: 10px 20px;
+    background-color: #cc1939;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-to-cart button:hover {
+    background-color: #d9534f;
+}
+.sale-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.topnav{
+    background-color: #ffffff;
+}
+

@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    background-image: url("/images/Admin/Admin-background.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 26%;
+    height: 26vh;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.btn-login{
+    margin-top: 1vh;
+    background-color: #8BC34A;
+    color: #ffffff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 16px;
+}
+
+input{
+    background-color: #f8f8f8;
+    border: 2px solid #8BC34A;
+    padding: 8px 20px;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #333;
+}
+

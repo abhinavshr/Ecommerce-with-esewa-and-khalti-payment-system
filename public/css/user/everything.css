@@ -1,0 +1,137 @@
+body{
+    background-color: #FFEDE6;
+}
+.topnav-container {
+    background-color: #ffffff;
+}
+
+.sidenav-container {
+    width: 100%;
+    height: 100%;
+}
+
+.right {
+    margin-left: 20%;
+    padding: 20px;
+    background-color: #FFEDE6;
+    height: auto;
+    padding-left: 4vw;
+}
+
+.heading{
+    font-size: 6vh;
+    color: #DD183B;
+}
+
+p{
+    font-size: 2vh;
+    margin-top: -0.3vh;
+    color: gray;
+}
+
+select{
+    width: 10vw;
+    height: 4vh;
+    font-size: 18px;
+    background-color: #FFEDE6;
+    border: none;
+    margin-right: 2vw;
+}
+
+select:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.product-list {
+    width: 100%;
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image img {
+    width: 90%;
+    height: auto;
+    max-height: 30vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2vh;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #c00;
+    border: 1px solid #c00;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background-color: #f0f0f0;
+    color: #900;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #c00;
+    color: #fff;
+    border-color: #c00;
+    cursor: default;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #ddd;
+    border-color: #ddd;
+    pointer-events: none;
+}

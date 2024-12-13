@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.checkout-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+form select:focus,
+form input:focus,
+form textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+.order-summary {
+    margin-top: 20px;
+}
+
+.order-summary .order-item,
+.order-summary .order-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.payment-method {
+    margin-top: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #c0392b;
+}
+
+.coupon-section {
+    width: 40%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.coupon-input {
+    padding: 8px;
+    width: calc(100% - 100px);
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.apply-coupon-btn {
+    padding: 8px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.apply-coupon-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,110 @@
+.Nav-Container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.Left-Nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.Right-Nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.Left-Nav li:not(:first-child), .Right-Nav li:not(:last-child) {
+    margin-left: 1rem;
+}
+
+.Left-Nav a, .Right-Nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.Left-Nav a:hover, .Right-Nav a:hover {
+    color: red;
+}
+
+.Right-Nav li:last-child {
+    margin-left: auto;
+}
+
+.material-symbols-outlined {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.nav-list {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Login-Button , .Logout-Button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Login-Button:hover, .Login-Button:hover{
+    background-color: #3e8e41;
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+
+}
+
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+

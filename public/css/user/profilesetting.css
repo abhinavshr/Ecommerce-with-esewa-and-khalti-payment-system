@@ -1,0 +1,38 @@
+.update-form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 20px auto;
+}
+
+.update-form .form-group {
+    margin-bottom: 20px;
+}
+
+.update-form .form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.update-form .form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.update-form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.update-form .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}

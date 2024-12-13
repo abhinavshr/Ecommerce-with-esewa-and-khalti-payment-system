@@ -1,0 +1,30 @@
+.payment-method {
+    margin-top: 30px;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-group label {
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.payment-method button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.payment-method button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
