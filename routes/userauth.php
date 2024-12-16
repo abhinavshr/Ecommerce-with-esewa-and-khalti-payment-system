@@ -27,6 +27,9 @@ Route::name('user.')->group(function () {
     Route::post('/contactus', [PageController::class, 'contactusstore'])->name('contactus.store');
     Route::get('privacypolicy', [PageController::class, 'privacypolicyindex'])->name('privacypolicy');
     route::get('terms', [PageController::class, 'termsconditionindex'])->name('terms');
+    Route::get('/search', [ProductController::class, 'search'])->name('products.search');
+    Route::get('/fruitsearch', [ProductController::class, 'fruitsearch'])->name('fruit.search');
+    Route::get('/drinksearch', [ProductController::class, 'drinksearch'])->name('drink.search');
 });
 
 Route::name('user.')->middleware(['auth:web'])->group(function () {
@@ -55,4 +58,7 @@ Route::name('user.')->middleware(['auth:web'])->group(function () {
     Route::put('/users/{user}', [PageController::class, 'update'])->name('userprofile.update');
 
     Route::post('/khalti/verify', [KhaltiController::class, 'verifyPayment']);
+
+
+
 });

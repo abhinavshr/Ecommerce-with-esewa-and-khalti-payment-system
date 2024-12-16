@@ -31,7 +31,6 @@ class ProductController extends Controller
     }
     $products = $query->paginate(6);
 
-
     return view('products.everything', compact('products'));
     }
 
@@ -109,4 +108,32 @@ class ProductController extends Controller
 
         return back()->with('success', 'Your review has been submitted successfully.');
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('searchProduct');
+        $products = Product::where('product_name', 'like', "%$search%")
+                        ->paginate(6);
+
+        return view('products.everything', compact('products'));
+    }
+
+    public function fruitsearch(Request $request){
+        $search = $request->input('searchProduct');
+        $products = Product::where('product_name', 'like', "%$search%")
+                        ->where('product_category', 'Fruit')
+                        ->paginate(6);
+
+        return view('products.fruit', compact('products'));
+    }
+
+    public function drinksearch(Request $request){
+        $search = $request->input('searchProduct');
+        $products = Product::where('product_name', 'like', "%$search%")
+                        ->where('product_category', 'Drink')
+                        ->paginate(6);
+
+        return view('products.drink', compact('products'));
+    }
+
 }

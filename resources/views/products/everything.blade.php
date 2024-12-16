@@ -17,8 +17,10 @@
     <div class="sidenav-container" style="display: flex;">
         <div class="sidenav">
             <div class="container">
+                <form action=" {{ route('user.products.search') }}" method="GET">
                 <input type="search" name="searchProduct" id="searchProduct" class="searchProduct"
                     placeholder="Search Product...">
+                </form>
                 <h2>Filter By Price</h2>
                 <?php
                 $maxPrice = \App\Models\Product::max('product_price');
@@ -95,52 +97,55 @@
                 @endif
             </div>
             <div class="product-list">
-
-                @foreach ($products as $product)
-                    <a href=" {{ route('user.product', ['id' => $product->id]) }} ">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="{{ asset('storage/images/products/' . $product->product_image) }}"
-                                    alt="{{ $product->product_name }}">
-                            </div>
-                            <div class="product-details">
-                                <h2>{{ $product->product_name }}</h2>
-                                @if ($product->product_quantity == 0)
-                                    <p style="color: red; font-weight: bold; font-size: larger;">Out of Stock</p>
-                                @else
-                                    <p>{{ $product->product_short_description }}</p>
-                                    <p>
-                                        Price:
-                                        @if ($product->discounted_price > 0)
-                                            <span style="text-decoration: line-through; color: red;">Rs.
-                                                {{ $product->product_price }} @if ($product->product_category == 'Fruit')
+                @if ($products->count() > 0)
+                    @foreach ($products as $product)
+                        <a href=" {{ route('user.product', ['id' => $product->id]) }} ">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="{{ asset('storage/images/products/' . $product->product_image) }}"
+                                        alt="{{ $product->product_name }}">
+                                </div>
+                                <div class="product-details">
+                                    <h2>{{ $product->product_name }}</h2>
+                                    @if ($product->product_quantity == 0)
+                                        <p style="color: red; font-weight: bold; font-size: larger;">Out of Stock</p>
+                                    @else
+                                        <p>{{ $product->product_short_description }}</p>
+                                        <p>
+                                            Price:
+                                            @if ($product->discounted_price > 0)
+                                                <span style="text-decoration: line-through; color: red;">Rs.
+                                                    {{ $product->product_price }} @if ($product->product_category == 'Fruit')
+                                                        Per Kg
+                                                    @endif
+                                                </span>
+                                                <span style="color: green;">Rs.
+                                                    {{ $product->product_price - ($product->product_price * $product->discounted_price) / 100 }}
+                                                    @if ($product->product_category == 'Fruit')
+                                                        Per Kg
+                                                    @endif ({{ $product->discounted_price }}%
+                                                    off)
+                                                </span>
+                                            @else
+                                                Rs. {{ $product->product_price }} @if ($product->product_category == 'Fruit')
                                                     Per Kg
                                                 @endif
-                                            </span>
-                                            <span style="color: green;">Rs.
-                                                {{ $product->product_price - ($product->product_price * $product->discounted_price) / 100 }}
-                                                @if ($product->product_category == 'Fruit')
-                                                    Per Kg
-                                                @endif ({{ $product->discounted_price }}%
-                                                off)
-                                            </span>
-                                        @else
-                                            Rs. {{ $product->product_price }} @if ($product->product_category == 'Fruit')
-                                                Per Kg
                                             @endif
-                                        @endif
-                                    </p>
-                                    <p>Quantity: {{ $product->product_quantity }}@if ($product->product_category == 'Fruit')
-                                            Kg
-                                        @endif
-                                    </p>
-                                    <p>Category: {{ $product->product_category }}</p>
-                                    <p>Product Seller: {{ $product->admin->name }}</p>
-                                @endif
+                                        </p>
+                                        <p>Quantity: {{ $product->product_quantity }}@if ($product->product_category == 'Fruit')
+                                                Kg
+                                            @endif
+                                        </p>
+                                        <p>Category: {{ $product->product_category }}</p>
+                                        <p>Product Seller: {{ $product->admin->name }}</p>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                @endforeach
+                        </a>
+                    @endforeach
+                @else
+                    <p>No product found</p>
+                @endif
             </div>
             <div class="custom-pagination">
                 {{ $products->appends(request()->query())->links('vendor.pagination.custom') }}
@@ -150,6 +155,7 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/search.js') }}"></script>
 </body>
 
 </html>

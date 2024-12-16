@@ -33,10 +33,10 @@
                     <input type="radio" id="esewa" name="payment" checked onchange="showPaymentMethod('esewa')">
                     <label for="esewa">eSewa</label>
                 </div>
-                <div>
+                {{-- <div>
                     <input type="radio" id="khalti" name="payment" onchange="showPaymentMethod('khalti')">
                     <label for="khalti">Khalti</label>
-                </div>
+                </div> --}}
                 <div id="esewa-payment-method" style="display: block;">
                     <form action="{{ route('user.esewa') }}" method="GET">
                         @csrf
@@ -45,13 +45,13 @@
                         <button class="btn" type="submit">Proceed to eSewa Payment</button>
                     </form>
                 </div>
-                <div id="khalti-payment-method" style="display: none;">
+                {{-- <div id="khalti-payment-method" style="display: none;">
                     <form action="{{ url('/khalti/verify') }}" method="POST">
                         @csrf
                     <p>Pay through Khalti.</p>
                     <button class="btn" type="submit" formaction="">Proceed to Khalti Payment</button>
                 </form>
-                </div>
+                </div> --}}
 
                 <script>
                     function showPaymentMethod(paymentMethod) {
